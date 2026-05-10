@@ -1,0 +1,26 @@
+app = "node-lab6"
+primary_region = "waw"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "3000"
+
+[deploy]
+  strategy = "bluegreen"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+  [[http_service.checks]]
+    grace_period = "60s"
+    interval = "10s"
+    method = "GET"
+    path = "/health"
+    timeout = "2s"

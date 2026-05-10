@@ -1,10 +1,11 @@
 {
-  "name": "node_lab4",
+  "name": "node_lab6",
   "version": "1.0.0",
-  "description": "MongoDB and Mongoose lab",
+  "description": "Node.js lab for CI/CD and Fly.io deployment",
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node src/server.ts",
+    "start": "node dist/server.js",
     "build": "tsc -p tsconfig.build.json",
     "test": "jest",
     "test:coverage": "jest --coverage"
