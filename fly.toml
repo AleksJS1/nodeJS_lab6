@@ -1,5 +1,5 @@
 app = "node-lab6"
-primary_region = "waw"
+primary_region = "ams"
 
 [build]
   dockerfile = "Dockerfile"
